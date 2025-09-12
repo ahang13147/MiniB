@@ -1,0 +1,11 @@
+com\minib\auth\AuthDtos.class
+com\minib\auth\AuthController.class
+com\minib\config\WebConfig.class
+com\minib\auth\Role.class
+com\minib\auth\AuthController$1.class
+com\minib\auth\AuthDtos$LoginResponse.class
+com\minib\auth\AuthDtos$UserProfile.class
+com\minib\auth\JwtService.class
+com\minib\auth\Permission.class
+com\minib\MiniBApplication.class
+com\minib\auth\AuthDtos$LoginRequest.class
