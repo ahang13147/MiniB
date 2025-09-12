@@ -70,3 +70,19 @@ mvn -q -f backend/pom.xml spring-boot:run -Dspring-boot.run.arguments=--server.p
 - 登录后返回 `token`、`用户信息`、`角色`、`权限列表`。
 - 前端基于路由守卫校验 `token`，并按权限动态展示卡片菜单。
 
+## 资源中心（所有角色可访问）
+
+- 路由：`/resources`
+- 模块：
+  - 科研资源共享：实验设备、科研数据、技术文件
+    - 基础属性：资源id、资源类型、名字、描述、归属（企业/学校）、状态（可被借用/已被借用）、发布人、借用人、位置（仅设备）
+    - 接口：
+      - GET `/api/resources/research` 支持按类型/归属/状态/关键字分页查询
+      - POST `/api/resources/research/borrow` 借用（传入 id、borrower）
+      - POST `/api/resources/research/return` 归还（传入 id）
+  - 课程资源库：优质课程、教学案例、课件、其他
+    - 基础属性：资源id、资源类型、名字、描述、归属、发布人
+    - 接口：
+      - GET `/api/resources/courses` 支持按类型/归属/关键字分页查询
+
+

@@ -29,7 +29,8 @@ const allMenus = [
   { title: '课程管理', desc: '教师/高校管理员', path: '/courses', perm: 'COURSE_MANAGE' },
   { title: '企业管理', desc: '企业管理员', path: '/companies', perm: 'COMPANY_MANAGE' },
   { title: '学生信息', desc: '可查看学生', path: '/students', perm: 'STUDENT_VIEW' },
-  { title: '教师信息', desc: '可查看教师', path: '/teachers', perm: 'TEACHER_VIEW' }
+  { title: '教师信息', desc: '可查看教师', path: '/teachers', perm: 'TEACHER_VIEW' },
+  { title: '资源中心', desc: '科研共享与课程资源', path: '/resources', perm: 'DASHBOARD_VIEW' }
 ]
 
 const menus = computed(() => {
