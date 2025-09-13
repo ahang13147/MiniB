@@ -6,14 +6,20 @@ const Dashboard = () => import('@/views/Dashboard.vue')
 const Register = () => import('@/views/Register.vue')
 const Forgot = () => import('@/views/Forgot.vue')
 const ResourceCenter = () => import('@/views/ResourceCenter.vue')
+const Profile = () => import('@/views/Profile.vue')
+const Notifications = () => import('@/views/Notifications.vue')
+const Settings = () => import('@/views/Settings.vue')
 
 export const constantRoutes: RouteRecordRaw[] = [
   { path: '/login', name: 'Login', component: Login, meta: { public: true } },
   { path: '/register', name: 'Register', component: Register, meta: { public: true } },
   { path: '/forgot', name: 'Forgot', component: Forgot, meta: { public: true } },
   { path: '/', name: 'Root', redirect: '/dashboard' },
-  { path: '/dashboard', name: 'Dashboard', component: Dashboard }
-  ,{ path: '/resources', name: 'ResourceCenter', component: ResourceCenter }
+  { path: '/dashboard', name: 'Dashboard', component: Dashboard },
+  { path: '/resources', name: 'ResourceCenter', component: ResourceCenter },
+  { path: '/profile', name: 'Profile', component: Profile },
+  { path: '/notifications', name: 'Notifications', component: Notifications },
+  { path: '/settings', name: 'Settings', component: Settings }
 ]
 
 const router = createRouter({
