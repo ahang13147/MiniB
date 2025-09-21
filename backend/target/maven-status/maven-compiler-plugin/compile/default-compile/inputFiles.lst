@@ -1,3 +1,5 @@
+C:\Users\Administrator\Desktop\MiniB\MiniB\backend\src\main\java\com\minib\achievements\AchievementController.java
+C:\Users\Administrator\Desktop\MiniB\MiniB\backend\src\main\java\com\minib\achievements\AchievementDtos.java
 C:\Users\Administrator\Desktop\MiniB\MiniB\backend\src\main\java\com\minib\auth\AuthController.java
 C:\Users\Administrator\Desktop\MiniB\MiniB\backend\src\main\java\com\minib\auth\AuthDtos.java
 C:\Users\Administrator\Desktop\MiniB\MiniB\backend\src\main\java\com\minib\auth\JwtService.java
@@ -8,7 +10,13 @@ C:\Users\Administrator\Desktop\MiniB\MiniB\backend\src\main\java\com\minib\compa
 C:\Users\Administrator\Desktop\MiniB\MiniB\backend\src\main\java\com\minib\config\WebConfig.java
 C:\Users\Administrator\Desktop\MiniB\MiniB\backend\src\main\java\com\minib\courses\CourseController.java
 C:\Users\Administrator\Desktop\MiniB\MiniB\backend\src\main\java\com\minib\courses\CourseDtos.java
+C:\Users\Administrator\Desktop\MiniB\MiniB\backend\src\main\java\com\minib\internships\InternshipController.java
+C:\Users\Administrator\Desktop\MiniB\MiniB\backend\src\main\java\com\minib\internships\InternshipDtos.java
+C:\Users\Administrator\Desktop\MiniB\MiniB\backend\src\main\java\com\minib\mentors\MentorController.java
+C:\Users\Administrator\Desktop\MiniB\MiniB\backend\src\main\java\com\minib\mentors\MentorDtos.java
 C:\Users\Administrator\Desktop\MiniB\MiniB\backend\src\main\java\com\minib\MiniBApplication.java
+C:\Users\Administrator\Desktop\MiniB\MiniB\backend\src\main\java\com\minib\projects\ProjectController.java
+C:\Users\Administrator\Desktop\MiniB\MiniB\backend\src\main\java\com\minib\projects\ProjectDtos.java
 C:\Users\Administrator\Desktop\MiniB\MiniB\backend\src\main\java\com\minib\resources\ResourceController.java
 C:\Users\Administrator\Desktop\MiniB\MiniB\backend\src\main\java\com\minib\resources\ResourceDtos.java
 C:\Users\Administrator\Desktop\MiniB\MiniB\backend\src\main\java\com\minib\resources\ResourceEnums.java

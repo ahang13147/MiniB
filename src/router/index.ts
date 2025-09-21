@@ -12,6 +12,10 @@ const CompanyManagement = () => import('@/views/CompanyManagement.vue')
 const Profile = () => import('@/views/Profile.vue')
 const Notifications = () => import('@/views/Notifications.vue')
 const Settings = () => import('@/views/Settings.vue')
+const ProjectManagement = () => import('@/views/ProjectManagement.vue')
+const InternshipManagement = () => import('@/views/InternshipManagement.vue')
+const AchievementCenter = () => import('@/views/AchievementCenter.vue')
+const MentorManagement = () => import('@/views/MentorManagement.vue')
 
 export const constantRoutes: RouteRecordRaw[] = [
   { path: '/login', name: 'Login', component: Login, meta: { public: true } },
@@ -23,6 +27,10 @@ export const constantRoutes: RouteRecordRaw[] = [
   { path: '/users', name: 'UserManagement', component: UserManagement },
   { path: '/courses', name: 'CourseManagement', component: CourseManagement },
   { path: '/companies', name: 'CompanyManagement', component: CompanyManagement },
+  { path: '/projects', name: 'ProjectManagement', component: ProjectManagement },
+  { path: '/internships', name: 'InternshipManagement', component: InternshipManagement },
+  { path: '/achievements', name: 'AchievementCenter', component: AchievementCenter },
+  { path: '/mentors', name: 'MentorManagement', component: MentorManagement },
   { path: '/profile', name: 'Profile', component: Profile },
   { path: '/notifications', name: 'Notifications', component: Notifications },
   { path: '/settings', name: 'Settings', component: Settings }

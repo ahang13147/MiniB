@@ -141,6 +141,10 @@ const allMenus = [
   { title: '用户管理', desc: '管理员可见', path: '/users', perm: 'USER_MANAGE' },
   { title: '课程管理', desc: '教师/高校管理员', path: '/courses', perm: 'COURSE_MANAGE' },
   { title: '企业管理', desc: '企业管理员', path: '/companies', perm: 'COMPANY_MANAGE' },
+  { title: '项目协作', desc: '校企合作项目管理', path: '/projects', perm: 'PROJECT_VIEW' },
+  { title: '实习就业', desc: '实习职位与申请管理', path: '/internships', perm: 'INTERNSHIP_VIEW' },
+  { title: '成果展示', desc: '学生成果与竞赛获奖', path: '/achievements', perm: 'ACHIEVEMENT_VIEW' },
+  { title: '双导师课堂', desc: '企业导师合作教学', path: '/mentors', perm: 'MENTOR_VIEW' },
   { title: '学生信息', desc: '可查看学生', path: '/students', perm: 'STUDENT_VIEW' },
   { title: '教师信息', desc: '可查看教师', path: '/teachers', perm: 'TEACHER_VIEW' },
   { title: '资源中心', desc: '科研共享与课程资源', path: '/resources', perm: 'DASHBOARD_VIEW' }
