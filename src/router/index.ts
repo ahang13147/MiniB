@@ -6,6 +6,9 @@ const Dashboard = () => import('@/views/Dashboard.vue')
 const Register = () => import('@/views/Register.vue')
 const Forgot = () => import('@/views/Forgot.vue')
 const ResourceCenter = () => import('@/views/ResourceCenter.vue')
+const UserManagement = () => import('@/views/UserManagement.vue')
+const CourseManagement = () => import('@/views/CourseManagement.vue')
+const CompanyManagement = () => import('@/views/CompanyManagement.vue')
 const Profile = () => import('@/views/Profile.vue')
 const Notifications = () => import('@/views/Notifications.vue')
 const Settings = () => import('@/views/Settings.vue')
@@ -17,6 +20,9 @@ export const constantRoutes: RouteRecordRaw[] = [
   { path: '/', name: 'Root', redirect: '/dashboard' },
   { path: '/dashboard', name: 'Dashboard', component: Dashboard },
   { path: '/resources', name: 'ResourceCenter', component: ResourceCenter },
+  { path: '/users', name: 'UserManagement', component: UserManagement },
+  { path: '/courses', name: 'CourseManagement', component: CourseManagement },
+  { path: '/companies', name: 'CompanyManagement', component: CompanyManagement },
   { path: '/profile', name: 'Profile', component: Profile },
   { path: '/notifications', name: 'Notifications', component: Notifications },
   { path: '/settings', name: 'Settings', component: Settings }
