@@ -1,83 +1,121 @@
-# 🎓 大学企业联盟平台 (MiniB)
+# 🎓 University–Enterprise Collaboration Platform (MiniB)
 
-一个基于 Vue3 + Spring Boot 的完整校企协同管理平台，支持多角色权限管理、项目协作、实习就业、成果展示等核心功能。
+A full-stack university–enterprise collaboration management platform based on Vue 3 and Spring Boot. It supports multi-role access control, project collaboration, internship & employment management, achievement showcase, and more.
 
-## 📋 系统功能
+## 📋 Features
 
-### 🔐 权限管理系统
-- **6种用户角色**：超级管理员、高校管理员、企业管理员、教师、学生、企业导师
-- **细粒度权限控制**：基于角色的功能权限和操作权限
-- **JWT身份认证**：安全的token认证机制
+### 🔐 Access Control System
 
-### 🚀 核心功能模块
-- **🤝 项目协作管理**：项目发布、匹配、全周期管理、资金管理
-- **💼 实习就业管理**：职位发布、申请流程、实习记录管理
-- **🏆 成果展示中心**：学生成果展示、验证审核、统计分析
-- **👨‍🏫 双导师课堂**：校企合作教学、选课管理、导师管理
-- **📚 资源共享中心**：科研资源共享、课程资源库
-- **🏢 校企信息管理**：高校和企业信息展示管理
+* **6 User Roles**
 
-## 🛠 技术栈
+  * Super Administrator
+  * University Administrator
+  * Enterprise Administrator
+  * Teacher
+  * Student
+  * Enterprise Mentor
 
-### 后端
-- **框架**：Spring Boot 3.3.2
-- **Java版本**：JDK 17+
-- **认证**：JWT Token
-- **API**：RESTful API
-- **构建工具**：Maven
+* **Fine-Grained Permission Control**
 
-### 前端
-- **框架**：Vue 3 + TypeScript
-- **UI组件**：Element Plus
-- **状态管理**：Pinia
-- **路由**：Vue Router 4
-- **构建工具**：Vite
-- **HTTP客户端**：Axios
+  * Role-based functional and operation-level permissions
 
-## 🚀 快速启动
+* **JWT Authentication**
 
-### 环境要求
-- **Java**: JDK 17 或更高版本
-- **Node.js**: 16 或更高版本
-- **Maven**: 3.6+ (如果系统已安装，可选)
-- **npm**: 8+ (随Node.js安装)
+  * Secure token-based identity authentication
 
-### ⚡ 一键启动（推荐）
+### 🚀 Core Modules
 
-**Windows用户**
+* **🤝 Project Collaboration Management**
+
+  * Project publishing, matching, full lifecycle management, funding management
+
+* **💼 Internship & Employment Management**
+
+  * Job posting, application workflow, internship record management
+
+* **🏆 Achievement Showcase Center**
+
+  * Student achievement display, validation & review, statistics & analysis
+
+* **👨‍🏫 Dual-Mentor Classroom**
+
+  * University–enterprise joint teaching, course selection, mentor management
+
+* **📚 Resource Sharing Center**
+
+  * Research resource sharing, course resource repository
+
+* **🏢 University–Enterprise Information Management**
+
+  * University and enterprise information display and management
+
+## 🛠 Tech Stack
+
+### Backend
+
+* **Framework**: Spring Boot 3.3.2
+* **Java Version**: JDK 17+
+* **Authentication**: JWT Token
+* **API Style**: RESTful API
+* **Build Tool**: Maven
+
+### Frontend
+
+* **Framework**: Vue 3 + TypeScript
+* **UI Library**: Element Plus
+* **State Management**: Pinia
+* **Routing**: Vue Router 4
+* **Build Tool**: Vite
+* **HTTP Client**: Axios
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+* **Java**: JDK 17 or higher
+* **Node.js**: 16 or higher
+* **Maven**: 3.6+ (optional if you use Maven Wrapper)
+* **npm**: 8+ (comes with Node.js)
+
+### ⚡ One-Click Start (Recommended)
+
+#### For Windows Users
+
 ```bash
-# 检查环境
+# Check environment
 check-environment.bat
 
-# 一键启动所有服务
+# Start all services
 start-all.bat
 
-# 或分别启动
-start-backend.bat    # 启动后端
-start-frontend.bat   # 启动前端
+# Or start separately
+start-backend.bat    # Start backend
+start-frontend.bat   # Start frontend
 ```
 
-**Linux/Mac用户**
+#### For Linux/Mac Users
+
 ```bash
-# 添加执行权限（首次运行）
+# Add execution permission (first run only)
 chmod +x *.sh
 
-# 检查环境
+# Check environment
 ./check-environment.sh
 
-# 一键启动所有服务
+# Start all services
 ./start-all.sh
 
-# 或分别启动
-./start-backend.sh    # 启动后端
-./start-frontend.sh   # 启动前端
+# Or start separately
+./start-backend.sh    # Start backend
+./start-frontend.sh   # Start frontend
 ```
 
-### 📋 手动启动
+### 📋 Manual Start
 
-**1. 启动后端服务**
+#### 1. Start Backend Service
 
-**方法一：在项目根目录启动（推荐）**
+**Option 1: Run from project root (recommended)**
+
 ```bash
 # Windows PowerShell
 mvn -q -f backend/pom.xml spring-boot:run
@@ -86,7 +124,8 @@ mvn -q -f backend/pom.xml spring-boot:run
 ./mvnw -f backend/pom.xml spring-boot:run
 ```
 
-**方法二：进入backend目录启动**
+**Option 2: cd into `backend` first**
+
 ```bash
 # Windows PowerShell
 cd backend
@@ -97,7 +136,8 @@ cd backend
 ./mvnw spring-boot:run
 ```
 
-**方法三：使用Maven Wrapper（推荐，无需安装Maven）**
+**Option 3: Use Maven Wrapper (recommended, Maven not required globally)**
+
 ```bash
 # Windows
 backend\mvnw.cmd spring-boot:run
@@ -106,41 +146,46 @@ backend\mvnw.cmd spring-boot:run
 ./backend/mvnw spring-boot:run
 ```
 
-后端服务启动后运行在：`http://localhost:8081`
+Backend service runs at: `http://localhost:8081`
 
-**2. 启动前端服务**
+#### 2. Start Frontend Service
 
-**安装依赖**
+**Install dependencies**
+
 ```bash
 npm install
 ```
 
-**启动开发服务器**
+**Start dev server**
+
 ```bash
 npm run dev
 ```
 
-前端服务启动后运行在：`http://localhost:5173`
+Frontend service runs at: `http://localhost:5173`
 
-### 3. 访问系统
+### 3. Access the System
 
-1. 打开浏览器访问：`http://localhost:5173`
-2. 使用以下测试账号登录：
+1. Open your browser and visit: `http://localhost:5173`
+2. Log in with one of the following test accounts:
 
-| 用户名 | 密码 | 角色 | 权限说明 |
-|--------|------|------|----------|
-| admin | admin | 超级管理员 | 拥有所有功能权限 |
-| uadmin | uadmin | 高校管理员 | 管理校内事务、课程、学生等 |
-| eadmin | eadmin | 企业管理员 | 管理企业信息、实习职位、项目等 |
-| teacher | teacher | 教师 | 课程管理、学生指导、成果验证 |
-| student | student | 学生 | 成果管理、实习申请、资源使用 |
-| mentor | mentor | 企业导师 | 双导师课堂、学生指导、项目管理 |
+| Username | Password | Role                | Description                                       |
+| -------- | -------- | ------------------- | ------------------------------------------------- |
+| admin    | admin    | Super Administrator | Full access to all features                       |
+| uadmin   | uadmin   | University Admin    | Manage on-campus affairs, courses, students, etc. |
+| eadmin   | eadmin   | Enterprise Admin    | Manage enterprise info, internships, projects     |
+| teacher  | teacher  | Teacher             | Course management, student guidance, verification |
+| student  | student  | Student             | Achievement management, internship applications   |
+| mentor   | mentor   | Enterprise Mentor   | Dual-mentor courses, student guidance, projects   |
 
-## 🔧 常见问题解决
+---
 
-### 🚨 快速诊断
+## 🔧 Troubleshooting
 
-**运行环境检查脚本**
+### 🚨 Quick Diagnostics
+
+**Run environment check script**
+
 ```bash
 # Windows
 check-environment.bat
@@ -149,107 +194,122 @@ check-environment.bat
 ./check-environment.sh
 ```
 
-### 后端启动问题
+### Backend Startup Issues
 
-**1. Java版本问题**
+**1. Java Version Issue**
+
 ```bash
-# 检查Java版本
+# Check Java version
 java -version
 
-# 如果版本低于17，请安装JDK 17+
-# 下载地址: https://adoptium.net/
+# If lower than 17, please install JDK 17+
+# Download: https://adoptium.net/
 ```
 
-**2. Maven问题**
+**2. Maven Issues**
+
 ```bash
-# 如果没有安装Maven，使用项目自带的Maven Wrapper
+# If Maven is not installed, use the bundled Maven Wrapper
 # Windows
 backend\mvnw.cmd spring-boot:run
 
 # Linux/Mac
 ./backend/mvnw spring-boot:run
 
-# 或者手动下载Maven: https://maven.apache.org/download.cgi
+# Or manually download Maven: https://maven.apache.org/download.cgi
 ```
 
-**3. 端口占用问题**
-- 后端默认端口8081，如果被占用：
-  - 修改 `backend/src/main/resources/application.properties` 中的 `server.port=8081`
-  - 或者运行时指定端口：
+**3. Port Conflict**
+
+* Backend uses port `8081` by default. If it is already in use:
+
+  * Modify `backend/src/main/resources/application.properties` and change `server.port=8081`, or
+  * Specify port at runtime:
+
 ```bash
 mvn -q -f backend/pom.xml spring-boot:run -Dspring-boot.run.arguments=--server.port=9090
 ```
 
-**4. 编译错误**
+**4. Compilation Errors**
+
 ```bash
-# 清理并重新编译
+# Clean and recompile
 mvn clean -f backend/pom.xml
 mvn compile -f backend/pom.xml
 
-# 如果仍有问题，尝试强制更新依赖
+# If still failing, force dependency update
 mvn clean compile -U -f backend/pom.xml
 ```
 
-**5. 类路径问题**
+**5. Classpath Issues**
+
 ```bash
-# 检查target目录
+# Check target directory
 ls backend/target/classes/com/minib/
 
-# 如果classes目录为空，重新编译
+# If classes directory is empty, recompile
 mvn clean compile -f backend/pom.xml
 ```
 
-### 前端启动问题
+### Frontend Startup Issues
 
-**1. Node.js版本问题**
+**1. Node.js Version Issue**
+
 ```bash
-# 检查Node.js版本
+# Check Node.js version
 node --version
 npm --version
 
-# 推荐使用Node.js 16+，下载地址: https://nodejs.org/
+# Recommended Node.js 16+, download: https://nodejs.org/
 ```
 
-**2. 依赖安装问题**
+**2. Dependency Installation Issues**
+
 ```bash
-# 清理缓存重新安装
+# Clear cache and reinstall
 npm cache clean --force
 rm -rf node_modules package-lock.json
 npm install
 
-# 如果网络问题，使用国内镜像
+# If network issues occur, use mirror registry
 npm config set registry https://registry.npmmirror.com
 npm install
 ```
 
-**3. 端口占用问题**
-- 前端默认端口5173，如果被占用会自动切换到5174等
-- 也可以手动指定端口：
+**3. Port Conflict**
+
+* Frontend uses port `5173` by default.
+* If the port is occupied, Vite will automatically switch to `5174` or another available port.
+* You can also explicitly specify a port:
+
 ```bash
 npm run dev -- --port 3000
 ```
 
-**4. 权限问题（Linux/Mac）**
+**4. Permission Issues (Linux/Mac)**
+
 ```bash
-# 给脚本添加执行权限
+# Add execution permission for scripts
 chmod +x *.sh
 
-# 如果npm install权限问题
+# If npm install permission issues occur
 sudo npm install
 ```
 
-### 常见错误及解决方案
+### Common Errors & Solutions
 
-**1. "Cannot find module" 错误**
+**1. "Cannot find module" Error**
+
 ```bash
-# 删除node_modules和package-lock.json，重新安装
+# Remove node_modules and lock file, then reinstall
 rm -rf node_modules package-lock.json
 npm install
 ```
 
-**2. "Port already in use" 错误**
+**2. "Port already in use" Error**
+
 ```bash
-# 查找占用端口的进程
+# Find process using the port
 # Windows
 netstat -ano | findstr :8081
 netstat -ano | findstr :5173
@@ -258,149 +318,175 @@ netstat -ano | findstr :5173
 lsof -i :8081
 lsof -i :5173
 
-# 杀死进程（替换PID）
+# Kill process (replace PID)
 # Windows
-taskkill /PID <进程ID> /F
+taskkill /PID <PID> /F
 
 # Linux/Mac
-kill -9 <进程ID>
+kill -9 <PID>
 ```
 
-**3. "Java heap space" 错误**
+**3. "Java heap space" Error**
+
 ```bash
-# 增加JVM内存
+# Increase JVM memory
 export MAVEN_OPTS="-Xmx1024m -Xms512m"
 mvn spring-boot:run
 ```
 
-**4. "CORS" 跨域问题**
-- 前端已配置代理，`/api` 请求会自动转发到后端
-- 如果仍有问题，检查 `vite.config.ts` 中的代理配置
+**4. "CORS" Issues**
 
-**5. 登录失败**
-- 确保后端服务已启动（http://localhost:8081）
-- 检查浏览器控制台是否有网络错误
-- 尝试使用不同的测试账号
+* Frontend has already configured a proxy: `/api` requests are proxied to the backend.
+* If CORS issues persist, check the proxy configuration in `vite.config.ts`.
 
-### 性能优化
+**5. Login Failure**
 
-**1. 后端优化**
+* Ensure backend service has started (`http://localhost:8081`)
+* Check browser console for network errors
+* Try another test account
+
+### Performance Optimization
+
+**1. Backend Optimization**
+
 ```bash
-# 使用生产模式启动
+# Start with production profile
 mvn spring-boot:run -Dspring-boot.run.profiles=prod
 
-# 或者打包后运行
+# Or package and run the jar
 mvn clean package -f backend/pom.xml
 java -jar backend/target/minib-backend-0.0.1-SNAPSHOT.jar
 ```
 
-**2. 前端优化**
+**2. Frontend Optimization**
+
 ```bash
-# 生产构建
+# Production build
 npm run build
 
-# 预览生产版本
+# Preview production build
 npm run preview
 ```
 
-## 📱 功能演示
+---
 
-### 登录系统
-1. 访问 `http://localhost:5173`
-2. 使用任意测试账号登录
-3. 系统会根据角色显示不同的功能菜单
+## 📱 Feature Demo
 
-### 主要功能
-- **仪表盘**：根据角色显示相关统计数据和功能入口
-- **项目协作**：创建、管理校企合作项目
-- **实习就业**：发布职位、申请实习、管理实习记录
-- **成果展示**：展示学生成果、验证审核
-- **双导师课堂**：管理校企合作课程
-- **资源共享**：科研设备和课程资源管理
+### Login
 
-## 🔍 API接口
+1. Visit `http://localhost:5173`
+2. Log in with any test account
+3. The system will display different menus and features based on the user role
 
-### 认证接口
-- `POST /api/auth/login` - 用户登录
-- `POST /api/auth/register` - 用户注册
-- `POST /api/auth/forgot` - 忘记密码
-- `POST /api/auth/reset` - 重置密码
+### Main Features
 
-### 项目管理
-- `GET /api/projects` - 获取项目列表
-- `POST /api/projects` - 创建项目
-- `PUT /api/projects/{id}` - 更新项目
-- `DELETE /api/projects/{id}` - 删除项目
+* **Dashboard**: Role-based statistics and entry points
+* **Project Collaboration**: Create and manage university–enterprise collaboration projects
+* **Internship & Employment**: Post jobs, apply for internships, manage internship records
+* **Achievement Showcase**: Display student achievements and perform validation/review
+* **Dual-Mentor Classroom**: Manage university–enterprise joint courses
+* **Resource Sharing**: Manage research equipment and course resources
 
-### 实习管理
-- `GET /api/internships/positions` - 获取实习职位
-- `POST /api/internships/positions` - 发布职位
-- `POST /api/internships/positions/{id}/apply` - 申请实习
+---
 
-### 成果管理
-- `GET /api/achievements` - 获取成果列表
-- `POST /api/achievements` - 创建成果
-- `POST /api/achievements/{id}/verify` - 验证成果
+## 🔍 API Endpoints
 
-### 导师管理
-- `GET /api/mentors/courses` - 获取双导师课程
-- `POST /api/mentors/courses` - 创建课程
-- `GET /api/mentors/enterprise-mentors` - 获取企业导师
+### Authentication
 
-## 📊 数据库设计
+* `POST /api/auth/login` – User login
+* `POST /api/auth/register` – User registration
+* `POST /api/auth/forgot` – Forgot password
+* `POST /api/auth/reset` – Reset password
 
-项目包含完整的数据库设计文档 `database_design.sql`，涵盖了所有功能模块的数据表结构，支持：
-- 用户权限管理
-- 项目协作流程
-- 实习就业管理
-- 成果展示验证
-- 双导师课堂
-- 资源共享
+### Project Management
 
-## 🎯 开发说明
+* `GET /api/projects` – Get project list
+* `POST /api/projects` – Create project
+* `PUT /api/projects/{id}` – Update project
+* `DELETE /api/projects/{id}` – Delete project
 
-### 项目结构
-```
+### Internship Management
+
+* `GET /api/internships/positions` – Get internship positions
+* `POST /api/internships/positions` – Post internship position
+* `POST /api/internships/positions/{id}/apply` – Apply for internship
+
+### Achievement Management
+
+* `GET /api/achievements` – Get achievement list
+* `POST /api/achievements` – Create achievement
+* `POST /api/achievements/{id}/verify` – Verify achievement
+
+### Mentor Management
+
+* `GET /api/mentors/courses` – Get dual-mentor courses
+* `POST /api/mentors/courses` – Create dual-mentor course
+* `GET /api/mentors/enterprise-mentors` – Get enterprise mentors
+
+---
+
+## 📊 Database Design
+
+The project includes a complete database design script `database_design.sql`, which covers all module schemas, including:
+
+* User & permission management
+* Project collaboration workflow
+* Internship & employment management
+* Achievement showcase & verification
+* Dual-mentor classroom
+* Resource sharing
+
+---
+
+## 🎯 Development Notes
+
+### Project Structure
+
+```text
 MiniB/
-├── backend/                 # Spring Boot后端
+├── backend/                      # Spring Boot backend
 │   ├── src/main/java/com/minib/
-│   │   ├── auth/           # 认证授权
-│   │   ├── projects/       # 项目协作
-│   │   ├── internships/    # 实习就业
-│   │   ├── achievements/   # 成果展示
-│   │   ├── mentors/        # 双导师课堂
-│   │   └── ...            # 其他模块
-│   └── pom.xml            # Maven配置
-├── src/                   # Vue3前端
-│   ├── views/             # 页面组件
-│   ├── api/               # API接口
-│   ├── stores/            # 状态管理
-│   └── router/            # 路由配置
-└── database_design.sql    # 数据库设计
+│   │   ├── auth/                 # Authentication & authorization
+│   │   ├── projects/             # Project collaboration
+│   │   ├── internships/          # Internships & employment
+│   │   ├── achievements/         # Achievement showcase
+│   │   ├── mentors/              # Dual-mentor classroom
+│   │   └── ...                   # Other modules
+│   └── pom.xml                   # Maven configuration
+├── src/                          # Vue 3 frontend
+│   ├── views/                    # Page components
+│   ├── api/                      # API layer
+│   ├── stores/                   # State stores (Pinia)
+│   └── router/                   # Route configuration
+└── database_design.sql           # Database design
 ```
 
-### 权限系统
-- 基于角色的权限控制（RBAC）
-- 细粒度的功能权限和操作权限
-- 前端路由守卫和组件权限控制
-- 后端API权限验证
+### Permission System
 
-## 📞 技术支持
+* Role-Based Access Control (RBAC)
+* Fine-grained functional and operation-level permissions
+* Frontend route guards and component-level permission control
+* Backend API permission verification
 
-如果遇到问题，请检查：
-1. Java版本是否为17+
-2. Node.js版本是否为16+
-3. 端口8081和5173是否被占用
-4. 网络连接是否正常
-5. 防火墙设置是否允许访问
+---
 
-## 🎉 系统特色
+## 📞 Support
 
-- **模块化设计**：功能模块独立，易于维护和扩展
-- **权限精确控制**：基于角色的细粒度权限管理
-- **现代化UI**：响应式设计，用户体验优良
-- **完整业务流程**：覆盖校企合作的各个环节
-- **数据可视化**：丰富的统计图表和数据分析
-- **可扩展架构**：支持后续功能扩展和定制开发
+If you encounter issues, please check:
 
+1. Java version is 17+
+2. Node.js version is 16+
+3. Ports `8081` and `5173` are not occupied
+4. Network connection is stable
+5. Firewall rules allow access to these ports
 
+---
+
+## 🎉 Highlights
+
+* **Modular Design**: Independent functional modules, easy to maintain and extend
+* **Precise Access Control**: Role-based fine-grained permission management
+* **Modern UI**: Responsive design and user-friendly interface
+* **Complete Business Flow**: Covers all major aspects of university–enterprise collaboration
+* **Data Visualization**: Rich charts and analytics for decision support
+* **Extensible Architecture**: Designed for future feature extensions and customization
