@@ -1,9 +1,10 @@
 # 🎓 University–Enterprise Collaboration Platform (MiniB)
 
 A full-stack university–enterprise collaboration management platform based on Vue 3 and Spring Boot. It supports multi-role access control, project collaboration, internship & employment management, achievement showcase, and more.
+##  DEMO
+https://github.com/user-attachments/assets/657bd716-b349-45cd-8182-41e91c55b43e
 
 ## 📋 Features
-
 ### 🔐 Access Control System
 
 * **6 User Roles**
